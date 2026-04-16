@@ -1,0 +1,22 @@
+html
+    head 
+        title #{video.title}
+        link(rel="stylesheet" href="/styles.css")
+    body 
+        include ./partials/header
+
+        h1 Title: #{video.title}
+        h2 Metadata: 
+        p Description: #{video.description}
+        p Length: #{formatTime(video.length_seconds)}
+        p Upload date: #{video.upload_date}
+        p Filename: #{video.filename}
+        p Resolution: #{video.resolution}
+        p Framerate: #{video.framerate}
+        
+        h2 Captions:
+        ul 
+            each caption in captions 
+                li 
+                    a(href=`/captions/${caption.caption_id}`)= caption.text
+                    span  | #{formatTime(caption.start_time)} - #{formatTime(caption.end_time)}

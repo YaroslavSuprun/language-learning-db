@@ -1,0 +1,15 @@
+html
+    head
+        title Search
+        link(rel="stylesheet" href="/styles.css")
+    body
+        include ./partials/header
+
+        h1 Caption Search Results
+        if results.length
+            ul
+                each result in results
+                    li
+                        a(href=`/captions/${result.caption_id}`) #{result.text}
+        else if query
+            p No results found.
