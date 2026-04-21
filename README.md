@@ -1,8 +1,8 @@
-# Language Learning Video Caption Database
+# Video Caption Database for Language Learning
 
 **Author:** Yaroslav Suprun
 
-A language learning database with a web UI, built for COMP 3005 at Carleton University. Users can browse Spanish-language videos, view timestamped captions, and look up translations in English and Ukrainian. Includes caption search functionality.
+A web app for language learners that lets users browse Spanish-language videos, view timestamped captions, and look up English and Ukrainian translations. Built on a relational SQLite schema (5 tables, N:N relationships) designed to support arbitrary languages — adding a new language requires only data inserts, no structural changes. Includes caption search functionality and SQL scripts for database creation and sample data population.
 
 ## Tech Stack
 
